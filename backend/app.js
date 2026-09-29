@@ -7,25 +7,13 @@ import resultRoutes from "./routes/resultRoutes.js";
 
 const app = express();
 
-
 // ================= CORS =================
-
-// app.use(
-//     cors({
-//         origin: [
-//             "http://localhost:5174",
-//             "https://vercel.app"
-//         ],
-//         credentials: true,
-//     })
-// );
-
 
 app.use(
     cors({
         origin: [
             "http://localhost:5174",
-            "https://rs-management-tau.vercel.app"
+            "https://nubtkhulnaacbd.vercel.app"
         ],
         credentials: true,
     })
@@ -41,24 +29,19 @@ app.use(express.urlencoded({
 
 app.use(cookieParser());
 
-
 // ================= Test Route =================
 
 app.get("/", (req, res) => {
-
     res.status(200).json({
         success: true,
         message: "Student Result Management System Backend is Running"
     });
-
 });
-
 
 // ================= Routes =================
 
 app.use("/api/students", studentRoutes);
 
 app.use("/api/results", resultRoutes);
-
 
 export default app;
