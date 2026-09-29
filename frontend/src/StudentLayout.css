@@ -274,6 +274,7 @@ body {
 
   .student-body {
     min-height: calc(100vh - 70px);
+    padding-top: 70px;
   }
 
   .header-menu-button {
@@ -376,6 +377,7 @@ body {
 
   .student-body {
     min-height: calc(100vh - 60px);
+    padding-top: 60px;
   }
 
 
@@ -469,6 +471,7 @@ body {
 
   .student-body {
     min-height: calc(100vh - 55px);
+    padding-top: 55px;
   }
 
 
@@ -551,6 +554,7 @@ body {
 
   .student-body {
     min-height: calc(100vh - 52px);
+    padding-top: 52px;
   }
 
 
@@ -634,6 +638,7 @@ body {
 
   .student-body {
     min-height: calc(100vh - 50px);
+    padding-top: 50px;
   }
 
 

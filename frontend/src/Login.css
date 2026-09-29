@@ -457,30 +457,20 @@ a {
 /* =========================================================
    BUTTON CIRCLE
 ========================================================= */
-
 .login-widget .form-actions .small-circle {
-  width: 20px;
-  height: 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  position: absolute;
-
-  left: 50%;
-
-  transform: translateX(-38px);
-
-  border-radius: 50%;
-
-  background: rgba(0, 0, 0, 0.2);
-
-  color: #fff;
-
-  font-size: 13px;
-
-  pointer-events: none;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 47%;
+    transform: translateX(-38px);
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 13px;
+    pointer-events: none;
 }
 
 .login-widget .form-actions .btn-success:hover .small-circle {
@@ -908,14 +898,13 @@ a {
     font-size: 13px;
   }
 
-  .login-widget .form-actions .small-circle {
-    width: 18px;
-    height: 18px;
-
+.login-widget .form-actions .small-circle {
+    width: 16px;
+    height: 16px;
     font-size: 11px;
+    transform: translateX(-30px);
+}
 
-    transform: translateX(-34px);
-  }
 
   .login-widget .form-actions .forgot {
     padding: 11px 0;

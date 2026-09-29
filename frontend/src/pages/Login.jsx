@@ -142,7 +142,7 @@ function Login() {
               =============================== */}
 
               <div className="form-actions">
-                <button
+                {/* <button
                   type="submit"
                   className="btn btn-block btn-lg btn-success"
                   disabled={loading}
@@ -156,7 +156,21 @@ function Login() {
                   </span>
 
                   <small>{loading ? "Signing In..." : "Sign In"}</small>
-                </button>
+                </button> */}
+                <button
+  type="submit"
+  className="btn btn-block btn-lg btn-success"
+  disabled={loading}
+>
+  {!loading && (
+    <span className="small-circle">
+      <FaCaretRight />
+    </span>
+  )}
+
+  <small>{loading ? "Signing In..." : "Sign In"}</small>
+</button>
+
 
                 <a
                   className="forgot"
