@@ -44,19 +44,7 @@ function ProtectedRoute() {
   }, []);
 
   if (checking) {
-    return (
-      <div
-        style={{
-          minHeight: "100vh",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          fontSize: "18px",
-        }}
-      >
-        Checking login...
-      </div>
-    );
+    return null;
   }
 
   if (!authenticated) {

@@ -5,7 +5,6 @@ import "./../SemesterResult.css";
 function SemesterResult() {
   const [result, setResult] = useState(null);
   const [semester, setSemester] = useState(8);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -14,7 +13,6 @@ function SemesterResult() {
 
   const loadSemesterResult = async () => {
     try {
-      setLoading(true);
       setError("");
 
       const response = await axios.get(
@@ -30,8 +28,6 @@ function SemesterResult() {
       setError(
         error.response?.data?.message || "Result not found"
       );
-    } finally {
-      setLoading(false);
     }
   };
 
@@ -62,25 +58,17 @@ function SemesterResult() {
           </div>
         </div>
 
-        {/* ================= RESULT HISTORY ================= */}
         <div className="result-history">
           <h2>Result History</h2>
 
-          {loading && (
-            <div className="loading">
-              Loading result...
-            </div>
-          )}
-
-          {error && !loading && (
+          {error && (
             <div className="error">
               {error}
             </div>
           )}
 
-          {!loading && result && (
+          {result && (
             <>
-              {/* ================= TABLE ================= */}
               <div className="table-responsive">
                 <table className="semester-result-table">
                   <thead>
@@ -112,7 +100,6 @@ function SemesterResult() {
                 </table>
               </div>
 
-              {/* ================= GPA ================= */}
               <div className="semester-gpa">
                 Semester GPA:{" "}
                 <strong>
@@ -126,5 +113,5 @@ function SemesterResult() {
     </div>
   );
 }
-
+  
 export default SemesterResult;
